@@ -6,7 +6,7 @@
 	</header>
 
 	<div id="content">
-		<%= @post.content %>
+		<%= markdown @post.content %>
 	</div>
 
 	<hr>
@@ -23,4 +23,8 @@
 
 	<hr>
 
+	<%= render 'disqus' %>
+
 </div>
+
+<%= link_to "Edit", edit_post_path(@post) %>
